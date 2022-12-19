@@ -1,19 +1,12 @@
-﻿int Max(int arg1, int arg2, int arg3)
-{
-    int result = arg1;
-    if(arg2> result) result = arg2;
-    if(arg3> result) result = arg3;
-    return result;
-}
-int[] array = {1,2,3,42,5,6,72,83,97};
+﻿//Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+//Например:
+//78 -> 8
+//12-> 2
+//85 -> 8
+int number1 = new Random().Next(10, 100);
 
-int result = Max(
-Max(array[0],array[1],array[2]),
-Max(array[3],array[4],array[5]),
-Max(array[6],array[7],array[8])
+Console.WriteLine(number1);
 
-);
-Console.WriteLine(result);
-
-
+ if(number1 / 10 > number1 % 10) Console.WriteLine(number1/10);
+ else Console.WriteLine(number1 % 10);
 
